@@ -1,0 +1,3 @@
+import './Footer.css'
+function Footer(){return <footer className="footer"><div><a href="#accueil"><img src="/images/logo.png" alt="EN Digital Studio"/></a><p>Créativité, stratégie et solutions digitales pour donner vie à vos ambitions.</p></div><nav><b>Navigation</b><a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a></nav><div><b>Contact</b><a href="mailto:endigitalstudio0@gmail.com">endigitalstudio0@gmail.com</a><a href="#contact">Nous contacter →</a></div><small>© {new Date().getFullYear()} EN Digital Studio.<br />Tous droits réservés.</small></footer>}
+export default Footer

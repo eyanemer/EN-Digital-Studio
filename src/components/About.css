@@ -1,0 +1,108 @@
+.about {
+  display: grid;
+  grid-template-columns: minmax(310px, 1.08fr) minmax(290px, .92fr) minmax(190px, .55fr);
+  align-items: center;
+  gap: clamp(30px, 4.5vw, 70px);
+  padding: clamp(66px, 8vw, 112px) max(6.8vw, 28px);
+  background: linear-gradient(110deg, #fffdf8, #f5eadc);
+}
+
+.about-art {
+  position: relative;
+  min-height: 390px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #0b4036;
+  box-shadow: 0 24px 48px rgba(47, 32, 19, .17);
+}
+
+.about-photo {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0, 54, 45, .28), rgba(171, 119, 61, .16)), url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=88') center / cover;
+  transform: scale(1.025);
+  transition: transform .7s ease;
+}
+
+.about-art:hover .about-photo { transform: scale(1.08); }
+.about-art::before { position: absolute; z-index: 1; inset: 16px; content: ''; border: 1px solid rgba(255, 255, 255, .6); border-radius: 10px; pointer-events: none; }
+.about-art::after { position: absolute; z-index: 0; inset: 0; content: ''; background: linear-gradient(0deg, rgba(0, 39, 33, .58), transparent 53%); }
+
+.about-mark {
+  position: absolute;
+  z-index: 2;
+  top: 29px;
+  left: 29px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, .48);
+  border-radius: 999px;
+  color: #fffaf1;
+  background: rgba(0, 53, 44, .58);
+  backdrop-filter: blur(8px);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.about-card {
+  position: absolute;
+  z-index: 2;
+  bottom: 28px;
+  left: 29px;
+  width: 142px;
+  padding: 17px 15px;
+  border: 1px solid rgba(229, 190, 130, .65);
+  border-radius: 10px;
+  color: #e8bf83;
+  background: rgba(0, 50, 42, .86);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .18);
+  backdrop-filter: blur(9px);
+}
+
+.about-card span { display: block; font: 600 43px/.82 var(--serif); }
+.about-card small { display: block; margin-top: 7px; color: #fff5e8; font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.about-content .section-label { justify-content: flex-start; margin-bottom: 10px; font-size: 9px; }
+.about-content h2 { color: var(--ink); font-size: clamp(2rem, 3.1vw, 3.25rem); line-height: 1.02; letter-spacing: -1.5px; }
+.about-content h2 em { color: var(--gold-dark); font-weight: 500; }
+.about-content > p:not(.section-label) { max-width: 510px; margin: 17px 0; color: #39443f; font-size: 12px; line-height: 1.7; }
+
+.small-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  margin-top: 4px;
+  padding: 0 17px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--green);
+  box-shadow: 0 9px 17px rgba(0, 61, 49, .15);
+  font-size: 10px;
+  font-weight: 800;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.small-button:hover, .small-button:focus-visible { background: #075144; box-shadow: 0 12px 22px rgba(0, 61, 49, .22); transform: translateY(-2px); }
+.values { display: grid; gap: 23px; padding-left: clamp(20px, 2.3vw, 34px); border-left: 1px solid #d8c3aa; list-style: none; }
+.values li { display: flex; align-items: flex-start; gap: 12px; }
+.values svg { flex: 0 0 auto; width: 31px; height: 31px; padding: 7px; color: var(--green); background: #f4e4d0; border-radius: 50%; }
+.values span { display: grid; gap: 4px; color: #58615d; font-size: 10px; line-height: 1.45; }
+.values b { color: #172a25; font: 600 15px var(--serif); }
+
+@media (max-width: 1080px) {
+  .about { grid-template-columns: minmax(290px, 1fr) minmax(280px, 1fr); }
+  .values { grid-column: 1 / -1; grid-template-columns: repeat(3, 1fr); padding: 24px 0 0; border-top: 1px solid #d8c3aa; border-left: 0; }
+}
+
+@media (max-width: 650px) {
+  .about { grid-template-columns: 1fr; gap: 30px; padding: 55px 20px; }
+  .about-art { min-height: 320px; }
+  .about-content { order: 2; }
+  .values { grid-template-columns: 1fr; gap: 16px; order: 3; padding-top: 22px; }
+  .about-mark { top: 23px; left: 23px; }
+  .about-card { bottom: 23px; left: 23px; }
+}
