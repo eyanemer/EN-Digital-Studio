@@ -14,6 +14,7 @@ import AnimatedCounter from './components/AnimatedCounter'
 import IntroScreen from './components/IntroScreen'
 import { Cursor, Reveal, ScrollProgress, SmoothScroll } from './components/Motion'
 import { motion, useReducedMotion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import { ArrowRight, CircleCheck, Sparkles } from 'lucide-react'
 import './FinalPolish.css'
 
@@ -64,6 +65,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <Analytics />
     </div>
   )
 }
