@@ -77,7 +77,7 @@
   .navbar-button { padding-inline: 13px; font-size: 9px; }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 860px) {
   .navbar { min-height: 68px; justify-content: space-between; padding: 8px 20px; }
   .navbar-logo img { width: 119px; height: 45px; }
   .navbar-button { display: none; }

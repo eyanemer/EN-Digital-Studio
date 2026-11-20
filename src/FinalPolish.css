@@ -1,0 +1,73 @@
+/* Ajustements partagés chargés après les styles des composants. */
+.service-card > p:last-child,
+.project-info > p:not(.project-tag) { font-size: 13px; line-height: 1.6; }
+.project-info > p:not(.project-tag) { min-height: auto; }
+.contact-form label { font-size: 12px; }
+.contact-form input,
+.contact-form select,
+.contact-form textarea { font-size: 14px; }
+.button { min-height: 50px; font-size: 14px; }
+.navbar-logo img { width: 158px; }
+.navbar-links a { font-size: 14px; }
+.navbar-button, .navbar-mobile-contact { font-size: 12px; }
+.section-label, .eyebrow { font-size: 12px; letter-spacing: 1.5px; }
+.service-tag, .project-tag { font-size: 11px; }
+.hero-description { font-size: 17px; }
+.hero-benefits { font-size: 12px; }
+.studio-strip span { font-size: 14px; }
+.service-card h3, .project-info h3 { font-size: 23px; }
+.service-card > p:last-child, .project-info > p:not(.project-tag) { font-size: 15px; }
+.contact-info > p:not(.section-label) { font-size: 16px; }
+.contact-form label { font-size: 14px; }
+.contact-form input, .contact-form select, .contact-form textarea { font-size: 16px; }
+.contact-feedback { font-size: 14px; }
+.method-step h3 { font-size: 16px; }
+.method-step p { font-size: 13px; }
+.stat-item span { font-size: 14px; }
+.faq-heading > p:last-child, .faq-answer p { font-size: 16px; }
+.faq-item button { font-size: 17px; }
+.footer a, .footer p { font-size: 14px; }
+.footer small { font-size: 12px; }
+.footer b { font-size: 11px; }
+.about-mark { font-size: 11px; }
+.about-card small { font-size: 11px; }
+.values span { font-size: 14px; }
+.values b { font-size: 17px; }
+.contact-details > * { font-size: 14px; }
+.contact-details b { font-size: 11px; }
+.contact-form button { font-size: 14px; }
+.service-top span, .method-step b { font-size: 12px; }
+.project-info small, .small-button, .portfolio-top > a { font-size: 13px; }
+.about-content .section-label { font-size: 12px; }
+.whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 35; display: inline-flex; min-height: 54px; align-items: center; gap: 9px; padding: 0 19px; border: 2px solid #fff; border-radius: 999px; color: #fff; background: #168b55; box-shadow: 0 8px 26px rgba(0, 49, 32, .24); font-size: 15px; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease; }
+.whatsapp-float:hover, .whatsapp-float:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0, 49, 32, .32); }
+.about-content > p:not(.section-label),
+.services-heading > p:last-child,
+.portfolio-top > div > p:last-child,
+.method-intro { font-size: 16px; }
+
+@media (max-width: 860px) {
+  .navbar-links a { font-size: 14px; }
+}
+
+@media (max-width: 860px) {
+  .navbar-logo img { width: 136px; }
+  .navbar-links a { font-size: 16px; }
+  .hero-description { font-size: 16px; }
+  .whatsapp-float { right: 15px; bottom: 15px; min-height: 52px; padding-inline: 16px; font-size: 14px; }
+}
+
+@media (max-width: 680px) {
+  .whatsapp-float { width: 54px; justify-content: center; padding: 0; }
+  .whatsapp-float span { display: none; }
+  .studio-stats { gap: 2px; padding-inline: 10px; }
+  .stat-item { padding-inline: 2px; }
+  .stat-item span { font-size: 12px; }
+  .mid-cta { padding-inline: 20px; }
+  .values { gap: 14px; }
+}
+
+@media (max-width: 380px) {
+  .hero h1 { font-size: 3.25rem; }
+  .hero-benefits { font-size: 10px; }
+}

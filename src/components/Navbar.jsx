@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import './Navbar.css'
 
@@ -12,10 +12,23 @@ const navigation = [
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const closeMenu = () => setIsOpen(false)
 
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 12)
+    const onKeyDown = (event) => { if (event.key === 'Escape') closeMenu() }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('keydown', onKeyDown)
+    onScroll()
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [])
+
   return (
-    <header className="navbar">
+    <header className={`navbar${isScrolled ? ' is-scrolled' : ''}`}>
       <a href="#accueil" className="navbar-logo" onClick={closeMenu} aria-label="EN Digital Studio — Accueil">
         <img src="/images/logo.png" alt="EN Digital Studio" />
       </a>

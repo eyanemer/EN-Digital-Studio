@@ -19,7 +19,7 @@
 .about-photo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(0, 54, 45, .28), rgba(171, 119, 61, .16)), url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=88') center / cover;
+  background: linear-gradient(120deg, rgba(0, 54, 45, .28), rgba(171, 119, 61, .16)), url('/images/hero-accueil.jpeg') center / cover;
   transform: scale(1.025);
   transition: transform .7s ease;
 }
@@ -98,7 +98,7 @@
   .values { grid-column: 1 / -1; grid-template-columns: repeat(3, 1fr); padding: 24px 0 0; border-top: 1px solid #d8c3aa; border-left: 0; }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 760px) {
   .about { grid-template-columns: 1fr; gap: 30px; padding: 55px 20px; }
   .about-art { min-height: 320px; }
   .about-content { order: 2; }

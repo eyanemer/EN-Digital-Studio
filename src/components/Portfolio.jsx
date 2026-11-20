@@ -1,5 +1,7 @@
 import './Portfolio.css'
 import { ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Reveal } from './Motion'
 
 const projects = [
   {
@@ -30,7 +32,7 @@ const projects = [
     tag: 'Projet académique',
     title: 'Système MES — Gestion des ressources',
     text: 'Une application full stack pour piloter les processus industriels, les opérateurs, les équipements et les matériaux.',
-    type: 'React · Node.js · MongoDB',
+    type: 'Application web',
     style: 'four',
     image: '/images/MES.png',
   },
@@ -39,18 +41,19 @@ const projects = [
 function Portfolio() {
   return (
     <section className="portfolio" id="portfolio" aria-labelledby="portfolio-title">
-      <div className="portfolio-top">
+      <Reveal className="portfolio-top">
         <div>
           <p className="section-label">— Quelques exemples —</p>
           <h2 id="portfolio-title">Nos projets, <em>notre savoir-faire.</em></h2>
           <p>Découvrez quelques concepts imaginés pour illustrer notre approche créative et notre univers visuel.</p>
         </div>
         <a href="#contact">Voir plus de projets <ArrowRight size={15} /></a>
-      </div>
+      </Reveal>
 
       <div className="portfolio-grid">
-        {projects.map(({ image, style, tag, text, title, type }) => (
-          <article className="project" key={title}>
+        {projects.map(({ image, style, tag, text, title, type }, index) => (
+          <Reveal key={title} delay={index * .07}>
+          <motion.article className="project" whileHover={{ y: -5 }}>
             <div className={`project-image project-${style}${image ? ' has-image' : ''}`}>
               {image ? <img src={image} alt={`Aperçu du projet ${title}`} loading="lazy" /> : <span>Visuel du projet</span>}
             </div>
@@ -60,7 +63,8 @@ function Portfolio() {
               <p>{text}</p>
               <small>{type}</small>
             </div>
-          </article>
+          </motion.article>
+          </Reveal>
         ))}
       </div>
     </section>

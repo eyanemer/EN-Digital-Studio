@@ -1,0 +1,28 @@
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 18px;
+  background: var(--cream);
+}
+
+.intro-screen img {
+  width: clamp(132px, 22vw, 190px);
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.intro-screen span {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-screen { display: none; }
+}

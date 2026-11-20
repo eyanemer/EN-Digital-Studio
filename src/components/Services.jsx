@@ -1,4 +1,6 @@
 import './Services.css'
+import { motion } from 'framer-motion'
+import { Reveal } from './Motion'
 import { Code2, ShoppingCart, MonitorSmartphone, PenTool, FileText, Presentation } from 'lucide-react'
 const services = [
   { icon: Code2, tag:'Web design', title: 'Sites web vitrines', text: 'Des sites élégants et professionnels pour présenter votre activité et attirer de nouveaux clients.' },
@@ -8,5 +10,5 @@ const services = [
   { icon: FileText, tag:'Carrière', title: 'CV optimisés ATS', text: 'Des CV professionnels, structurés et optimisés pour les logiciels de recrutement.' },
   { icon: Presentation, tag:'Présentation', title: 'Présentations PowerPoint', text: 'Des présentations visuelles et percutantes pour valoriser vos idées et vos projets.' },
 ]
-function Services() { return <section className="services" id="services"><div className="services-heading"><p className="section-label">— Ce que nous proposons —</p><h2>Des solutions créatives <em>pour vos ambitions.</em></h2><p>De la conception à la réalisation, nous donnons forme à vos idées grâce à des solutions digitales pensées pour vous.</p></div><div className="services-grid">{services.map(({ icon: Icon, tag, title, text }, index) => <article className="service-card" key={title}><div className="service-top"><Icon className="service-icon" strokeWidth={1.6} /><span>0{index + 1}</span></div><p className="service-tag">{tag}</p><h3>{title}</h3><p>{text}</p></article>)}</div></section> }
+function Services() { return <section className="services" id="services"><Reveal className="services-heading"><p className="section-label">— Ce que nous proposons —</p><h2>Des solutions créatives <em>pour vos ambitions.</em></h2><p>De la conception à la réalisation, nous donnons forme à vos idées grâce à des solutions digitales pensées pour vous.</p></Reveal><div className="services-grid">{services.map(({ icon: Icon, tag, title, text }, index) => <Reveal key={title} delay={index * .06}><motion.article className="service-card" whileHover={{ y: -6 }} whileTap={{ scale: .99 }}><div className="service-top"><Icon className="service-icon" strokeWidth={1.6} /><span>0{index + 1}</span></div><p className="service-tag">{tag}</p><h3>{title}</h3><p>{text}</p></motion.article></Reveal>)}</div></section> }
 export default Services
