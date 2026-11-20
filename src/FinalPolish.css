@@ -39,8 +39,6 @@
 .service-top span, .method-step b { font-size: 12px; }
 .project-info small, .small-button, .portfolio-top > a { font-size: 13px; }
 .about-content .section-label { font-size: 12px; }
-.whatsapp-float { position: fixed; right: 22px; bottom: 22px; z-index: 35; display: inline-flex; min-height: 54px; align-items: center; gap: 9px; padding: 0 19px; border: 2px solid #fff; border-radius: 999px; color: #fff; background: #168b55; box-shadow: 0 8px 26px rgba(0, 49, 32, .24); font-size: 15px; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease; }
-.whatsapp-float:hover, .whatsapp-float:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0, 49, 32, .32); }
 .about-content > p:not(.section-label),
 .services-heading > p:last-child,
 .portfolio-top > div > p:last-child,
@@ -54,12 +52,9 @@
   .navbar-logo img { width: 136px; }
   .navbar-links a { font-size: 16px; }
   .hero-description { font-size: 16px; }
-  .whatsapp-float { right: 15px; bottom: 15px; min-height: 52px; padding-inline: 16px; font-size: 14px; }
 }
 
 @media (max-width: 680px) {
-  .whatsapp-float { width: 54px; justify-content: center; padding: 0; }
-  .whatsapp-float span { display: none; }
   .studio-stats { gap: 2px; padding-inline: 10px; }
   .stat-item { padding-inline: 2px; }
   .stat-item span { font-size: 12px; }

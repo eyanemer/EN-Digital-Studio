@@ -13,7 +13,7 @@ import AnimatedCounter from './components/AnimatedCounter'
 import IntroScreen from './components/IntroScreen'
 import { Cursor, Reveal, ScrollProgress, SmoothScroll } from './components/Motion'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Gem, Headphones, MessageCircle, Rocket, Sparkles } from 'lucide-react'
+import { ArrowRight, Gem, Headphones, Rocket, Sparkles } from 'lucide-react'
 import './FinalPolish.css'
 
 function App() {
@@ -63,10 +63,6 @@ function App() {
         <Contact />
       </main>
       <Footer />
-      <a className="whatsapp-float" href="https://wa.me/21655641245?text=Bonjour%20EN%20Digital%20Studio%2C%20je%20souhaite%20parler%20d%E2%80%99un%20projet." target="_blank" rel="noreferrer" aria-label="Contacter EN Digital Studio sur WhatsApp">
-        <MessageCircle size={21} aria-hidden="true" />
-        <span>WhatsApp</span>
-      </a>
     </div>
   )
 }
