@@ -52,9 +52,9 @@ function App() {
         <Reveal><Services /></Reveal>
         <Reveal><About /></Reveal>
         <section className="studio-stats" aria-label="Le studio en quelques chiffres">
-          <AnimatedCounter value={6} label="expertises proposées" />
-          <AnimatedCounter value={4} label="projets présentés" />
-          <AnimatedCounter value={1} label="approche sur mesure" />
+          <AnimatedCounter value={6} label="expertises complémentaires" />
+          <AnimatedCounter value={100} suffix="%" label="solutions sur mesure" />
+          <AnimatedCounter value={1} suffix=":1" label="accompagnement personnalisé" />
         </section>
         <Reveal><Method /></Reveal>
         <Reveal><Portfolio /></Reveal>
