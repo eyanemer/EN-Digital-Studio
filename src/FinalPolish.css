@@ -39,6 +39,7 @@
 .service-top span, .method-step b { font-size: 12px; }
 .project-info small, .small-button, .portfolio-top > a { font-size: 13px; }
 .about-content .section-label { font-size: 12px; }
+.hero-scene { align-self: start; margin-top: 28px; }
 .about-content > p:not(.section-label),
 .services-heading > p:last-child,
 .portfolio-top > div > p:last-child,
@@ -46,6 +47,10 @@
 
 @media (max-width: 860px) {
   .navbar-links a { font-size: 14px; }
+}
+
+@media (max-width: 900px) {
+  .hero-scene { align-self: center; margin-top: 0; }
 }
 
 @media (max-width: 860px) {
@@ -63,6 +68,6 @@
 }
 
 @media (max-width: 380px) {
-  .hero h1 { font-size: 3.25rem; }
+  .hero h1 { font-size: clamp(2.7rem, 11vw, 3.1rem); }
   .hero-benefits { font-size: 10px; }
 }

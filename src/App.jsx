@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import './App.css'
 import './HeroVisual.css'
 import './HomePolish.css'
@@ -13,7 +14,7 @@ import AnimatedCounter from './components/AnimatedCounter'
 import IntroScreen from './components/IntroScreen'
 import { Cursor, Reveal, ScrollProgress, SmoothScroll } from './components/Motion'
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Gem, Headphones, Rocket, Sparkles } from 'lucide-react'
+import { ArrowRight, CircleCheck, Sparkles } from 'lucide-react'
 import './FinalPolish.css'
 
 function App() {
@@ -35,15 +36,15 @@ function App() {
           <div className="hero-copy">
             <motion.p className="eyebrow" initial={reduceMotion ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: reduceMotion ? 0 : .45 }}><Sparkles size={13} /> Studio créatif & digital</motion.p>
             <motion.h1 initial={reduceMotion ? false : 'hidden'} animate="visible" variants={{ visible: { transition: { staggerChildren: reduceMotion ? 0 : .09, delayChildren: reduceMotion ? 0 : .12 } } }}>
-              <span className="hero-line">{['Créons', 'ensemble'].map((word) => <motion.span className="hero-word" key={word} variants={wordVariants}>{word} </motion.span>)}</span>
-              <span className="hero-line"><em>{['votre', 'univers', 'digital.'].map((word) => <motion.span className="hero-word" key={word} variants={wordVariants}>{word} </motion.span>)}</em></span>
+              <span className="hero-line">{['Des', 'idées', 'qui'].map((word, index, words) => <Fragment key={word}><motion.span className="hero-word" variants={wordVariants}>{word}</motion.span>{index < words.length - 1 ? ' ' : null}</Fragment>)}</span>
+              <span className="hero-line"><em>{['prennent', 'vie.'].map((word, index, words) => <Fragment key={word}><motion.span className="hero-word" variants={wordVariants}>{word}</motion.span>{index < words.length - 1 ? ' ' : null}</Fragment>)}</em></span>
             </motion.h1>
-            <motion.p className="hero-description" initial={reduceMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : .48 }}>Des solutions créatives et sur mesure pour développer votre présence en ligne et faire briller votre marque.</motion.p>
+            <motion.p className="hero-description" initial={reduceMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : .48 }}>Nous créons des identités, des sites web et des expériences digitales sur mesure pour transformer vos idées en projets qui marquent.</motion.p>
             <motion.div className="hero-actions" initial={reduceMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : .58 }}>
               <motion.a whileHover={{ y: -3, scale: 1.02 }} whileTap={{ scale: .98 }} href="#contact" className="button button-primary">Parlons de votre projet <ArrowRight size={16} /></motion.a>
-              <a href="#portfolio" className="button button-secondary">Voir notre portfolio <ArrowRight size={16} /></a>
+              <a href="#portfolio" className="button button-secondary">Voir nos réalisations <ArrowRight size={16} /></a>
             </motion.div>
-            <div className="hero-benefits"><span><Rocket size={15} /> Innovation</span><span><Gem size={15} /> Qualité</span><span><Headphones size={15} /> Accompagnement</span></div>
+            <div className="hero-benefits"><span><CircleCheck size={15} /> Sur mesure</span><span><CircleCheck size={15} /> Responsive</span><span><CircleCheck size={15} /> Accompagnement</span></div>
           </div>
           <div className="hero-scene" role="img" aria-label="Espace de travail élégant EN Digital Studio">
           </div>
